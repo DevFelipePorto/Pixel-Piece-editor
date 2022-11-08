@@ -1,0 +1,26 @@
+body{
+    background-color: #222;
+}
+iframe{
+    border: 0;
+}
+
+.tela{
+    transition: 0.3s;
+}
+hr{
+    border:solid #777;
+    width: 100%;
+    color: #777;
+}
+button{
+    border-radius: 20px;
+    color: #777;
+    border: 0;
+    background-color: #222;
+}
+button:hover{
+    transition: 0.5s;
+    background-color: #111;
+    color: #fff;
+}
