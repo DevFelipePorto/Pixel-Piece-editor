@@ -12,14 +12,104 @@
         </head>
 
         <style>
-            body{
-                background-image: -webkit-linear-gradient(0deg, rgb(46, 46, 46) 0%, rgba(42,59,112,1) 100%);
-            }
+ body {
+  background: #011531;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  color: #353535;
+  font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+}
 
-            button{
-                width: 90%;
-                height: 90%;
-            }
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #676767;
+}
+/*Div para fazer todos os botoes bonitu */
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+/*Arruma tamanho dos botoes normais*/
+button, .btn-11 {
+  margin: 20px;
+  height: 50px;
+  width: 90px;
+}
+/*Arruma o tamanho dos botoes bonitu */
+.custom-btn {
+  width: 130px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+ /*Cores Aparentes do botao*/
+.btn-11 {
+  border: none;
+  background: rgb(20, 0, 94);
+    background: linear-gradient(0deg, rgb(28, 0, 80) 0%, rgb(0, 43, 71) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+/*Cor pra quando por o mouse em cima do titulo do botao */
+.btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+/*Animação que passa no botão */
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 4s ease-in-out infinite;
+}
+/*O quanto vai sumir o botao quando por o mouse em cima */
+.btn-11:hover{
+  opacity: .7;
+}
+ 
+/*Cores que aparece no fundo do botao quando clica */
+.btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(5, 0, 75, 0.3),
+              -4px -4px 6px 0 rgba(99, 255, 242, 0.993), 
+    inset -4px -4px 6px 0 rgb(247, 28, 255),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+/*Animaçao */
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
 
             table{
                 width: 100%;
@@ -38,36 +128,43 @@
 
         <body>
 
+            <div class="frame">
             <table>
 
                 <tr>
                     <td>
+                        <!--Criaçao do botao para a animação--> <!--Incrementar o button class abaixo dentro da tabela com os links-->
+                        <button class="custom-btn btn-11">Inicio<div class="dot"></div></button>
                         <a target="tela" href="inicio.html"> <button> Inicio </button> </a>
                     </td>
 
                     
                     <td>
+                        <button class="custom-btn btn-11">Tutoriais<div class="dot"></div></button>
                         <a target="tela" href="tutoriais.html"> <button> Tutoriais </button> </a>
                     </td>
 
                     
                     <td>
+                        <button class="custom-btn btn-11">Projetos da Comunidade<div class="dot"></div></button>
                         <a target="tela" href="projetos_comunidade.html"> <button> Projetos da Comunidade </button> </a>
                     </td>
 
                     
                     <td>
+                        <button class="custom-btn btn-11">Meus Projetos<div class="dot"></div></button>
                         <a target="tela" href="Meus_projetos.html"> <button> Meus Projetos </button> </a>
                     </td>
 
                     
                     <td>
+                        <button class="custom-btn btn-11">Meu Perfil<div class="dot"></div></button>
                         <a target="tela" href="perfil.html"> <button> Meu Perfil  </button> </a>
                     </td>
                 </tr>
 
             </table>
-
+        </div>
             <br><hr>
 
             <iframe name="tela" width="100%" height="80%"></iframe>
