@@ -39,7 +39,7 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: linear-gradient( rgba(5, 0, 75, 0.3), #860086);
 }
 
 .login-box {
@@ -111,11 +111,11 @@ body {
 }
 
 .login-box a:hover {
-  background: #03e9f4;
+  background: rgb(255, 0, 255),;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
+  box-shadow: 0 0 5px rgb(0, 255, 255),
+              0 0 25px rgb(255, 0, 255),
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
 }
@@ -131,7 +131,7 @@ body {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
+  animation: btn-anim1 2s linear infinite;
 }
 
 @keyframes btn-anim1 {
@@ -149,7 +149,7 @@ body {
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
+  animation: btn-anim2 2s linear infinite;
   animation-delay: .25s
 }
 
@@ -211,11 +211,11 @@ body {
             <form>
               <div class="user-box">
                 <input type="text" name="" required="">
-                <label>Username</label>
+                <label>Nome</label>
               </div>
               <div class="user-box">
                 <input type="password" name="" required="">
-                <label>Password</label>
+                <label>Senha</label>
               </div>
               <a href="#">
                 <span></span>
