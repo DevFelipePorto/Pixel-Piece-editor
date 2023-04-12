@@ -1,169 +1,142 @@
-<DOCTYPE html >
-    <html>
-        <head>
+<DOCTYPE html>
+<html>
+    <head>
     
-            <title>
-                Pixel Piece 
-            </title>
+        <title> Pixel Piece </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="icon" href="https://i.imgur.com/BAARnxG.png">
     
-            <meta charset="UTF-8">
-            <link rel="stylesheet" type="text/css" href="estilo.css">
-            <link rel="icon" href="https://i.imgur.com/BAARnxG.png">
+    </head>
     
-        </head>
+    <style>
+        
+    body{
+        background-image: -webkit-linear-gradient( rgb(32, 32, 32), #000043);
+        }
+    h1{
+        position: relative;
+        text-align: center;
+        color: #353535;
+        font-size: 50px;
+        font-family: "Cormorant Garamond", serif;
+        }
 
-        <style>
- body {
-  background-image: -webkit-linear-gradient( rgb(32, 32, 32), #000043);
-}
-h1 {
-  position: relative;
-  text-align: center;
-  color: #353535;
-  font-size: 50px;
-  font-family: "Cormorant Garamond", serif;
-}
+    p{
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        font-size: 18px;
+        color: #676767;
+        }
+        
+    .frame{
+        width: 100%;
+        text-align: center;
+        }
+        
+    button, .btn-11{
+        height: 50px;
+        width: 90px;
+        }
+        
+    .custom-btn{
+        margin-right:5%;
+        width: 75%;
+        height: 80%;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-size: 125%;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        }
 
-p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  text-align: center;
-  font-size: 18px;
-  color: #676767;
-}
-/*Div para fazer todos os botoes bonitu */
-.frame {
-  width: 100%;
-  text-align: center;
-}
-/*Arruma tamanho dos botoes normais*/
-button, .btn-11 {
-  height: 50px;
-  width: 90px;
-}
-/*Arruma o tamanho dos botoes bonitu */
-.custom-btn {
-  margin-right:5%;
-  width: 75%;
-  height: 80%;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-size: 125%;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
+    .btn-11{
+        border: none;
+        background: rgba(0,0,0,.5);
+        color: #fff;
+        overflow: hidden;
+        }
+        
+    .btn-11:hover{
+        text-decoration: none;
+        color: #fff;
+        }
+        
+    .btn-11:before{
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: -180px;
+        left: 0;
+        width: 30px;
+        height: 100%;
+        background-color: #fff;
+        animation: shiny-btn1 4s ease-in-out infinite;
+        }
+        
+    .btn-11:hover{
+        opacity: .7;
+        }
+        
+    .btn-11:active{
+        transition: 3s;
+        box-shadow: 0 0 10px rgba(5, 0, 75, 0.3), 0 0 10px rgba(99, 255, 242, 0.993), 0 0 20px #fff, inset  0 0 15px rgb(208, 66, 255), inset  0 0 15px rgba(0, 0, 0, .2);
+        }
+        
+    .links td{
+        background-color: #676767;
+        border-radius: 10px;
+        }
 
- /*Cores Aparentes do botao*/
-.btn-11 {
-  border: none;
-  
-  background: rgba(0,0,0,.5);
-    color: #fff;
-    overflow: hidden;
-}
-/*Cor pra quando por o mouse em cima do titulo do botao */
-.btn-11:hover {
-    text-decoration: none;
-    color: #fff;
-    
-}
+    @-webkit-keyframes shiny-btn1{
+        0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+        80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+        81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+        100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+        }
 
-/*Animação que passa no botão */
-.btn-11:before {
-    position: absolute;
-    content: '';
-    display: inline-block;
-    top: -180px;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    background-color: #fff;
-    animation: shiny-btn1 4s ease-in-out infinite;
-}
-/*O quanto vai sumir o botao quando por o mouse em cima */
-.btn-11:hover{
-  opacity: .7;
-}
- 
-/*Cores que aparece no fundo do botao quando clica */
-.btn-11:active{
-    transition: 3s;
-    box-shadow:
-        0 0 10px rgba(5, 0, 75, 0.3),
-        0 0 10px rgba(99, 255, 242, 0.993),
-        0 0 20px #fff,
-        inset  0 0 15px rgb(208, 66, 255),
-        inset  0 0 15px rgba(0, 0, 0, .2)
-        ;
-}
-.links td{
-    background-color: #676767;
-    border-radius: 10px;
-}
+    table{
+        width: 100%;
+        height: 7%;
+        }
+        
+    td{
+        text-align: center ;
+        width: 20%;
+        }
+        
+    img{
+        width: 20%;
+        border-radius: 100%;
+        }
+        
+    </style>
 
-/*Animaçao */
-@-webkit-keyframes shiny-btn1 {
-    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
-    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
-    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
-    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
-}
-
-
-            table{
-                width: 100%;
-                height: 7%;
-            }
-            td{
-                text-align: center ;
-                width: 20%;
-            }
-            img{
-                width: 20%;
-                border-radius: 100%;
-            }
-
-        </style>
-
-        <body>
+    <body>
 
             <div class="frame">
             <table style="width: 100%; margin-left: 3%; margin-right: 3%;">
 
                 <tr>
-                    <td>
-                        <!--Criaçao do botao para a animação--> <!--Incrementar o button class abaixo dentro da tabela com os links-->
-                        
-                        <a target="tela" href="inicio.html"><button class="custom-btn btn-11">Tutoriais<div class="dot" ></div></button></a>
-                    </td>
+                    
+                    <td><a target="tela" href="inicio.html"><button class="custom-btn btn-11">Tutoriais<div class="dot" ></div></button></a></td>
 
-                    
-                    <td>
-                        <a target="tela" href="tutoriais.html"> <button class="custom-btn btn-11">Comunidade<div class="dot" ></div></button> </a>
-                    </td>
+                    <td><a target="tela" href="tutoriais.html"> <button class="custom-btn btn-11">Comunidade<div class="dot" ></div></button> </a></td>
 
-                    
-                    <td>
-                        <a target="tela" href="projetos_comunidade.html"> <button class="custom-btn btn-11">Galerias<div class="dot" ></div></button> </a>
-                    </td>
+                    <td><a target="tela" href="projetos_comunidade.html"> <button class="custom-btn btn-11">Galerias<div class="dot" ></div></button> </a></td>
 
+                    <td><a target="tela" href="Meus_projetos.html"> <button class="custom-btn btn-11">+ Novo Projeto<div class="dot" ></div></button> </a></td>
                     
-                    <td>
-                        <a target="tela" href="Meus_projetos.html"> <button class="custom-btn btn-11">+ Novo Projeto<div class="dot" ></div></button> </a>
-                    </td>
+                    <td><a style=""  target="tela" href="perfil.html"> <img src=""> </a></td>
                     
-                    <td>
-                        <a style="margin-right:2%;"  target="tela" href="perfil.html"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEXk5ueutLepsLPo6uursbXJzc/p6+zj5ea2u76orrKvtbi0ubzZ3N3O0dPAxcfg4uPMz9HU19i8wcPDx8qKXtGiAAAFTElEQVR4nO2d3XqzIAyAhUD916L3f6+f1m7tVvtNINFg8x5tZ32fQAIoMcsEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQTghAJD1jWtnXJPP/54IgNzZQulSmxvTH6oYXX4WS+ivhTbqBa1r26cvCdCu6i0YXbdZ0o4A1rzV+5IcE3YE+z58T45lqo7g1Aa/JY5tgoqQF3qb382x7lNzBLcxft+O17QUYfQI4IIeklKsPSN4i6LKj/7Zm8n99RbHJpEw9gEBXNBpKIYLJqKYRwjOikf//r+J8ZsVuacbqCMNleI9TqGLGqMzhnVdBOdd6F/RlrFijiCoVMk320CBIahUxTWI0KKEcJqKbMdpdJb5QvdHq6wCI5qhKlgGMS/RBHkubWDAE+QZxB4xhCyDiDkLZxgGEVdQldzSKbTIhmZkFkSEPcVvmBn2SMuZB9od7fQDsMiDdKJjFUSCQarM5WirZ3C2TT/htYnyPcPfgrFHWz0BI74gr6J/IZiGUxAZGQLqmvQLTrtE/Go4YxhVRIpEw+sww1IIcqr5NKmUUzLF3d4/qPkYIp2T/obPuemlojFUR4t9Q2Vojhb7BmgElWHzLPH8hucfpefPNFTVgs9h1AdU/Pin96vwWbWdf+X9Absn3OdO34aMdsDnP8WgKYisTqI6CkNGqZQo1XA6Ef6AU32SJzOcBukHPF07/xNSgmHKa5BOhtezv6mA/rYJpwXNAnbRZ1XuF3BzDcO3vpA3+ny2909gbqE4hhD3LIPhLLyBNhPZvbZ3B+3tPYa18A7auSlXQayKwTPNLKDcuOB0xPYKDPFTkWsevQPRZ1J8Hji9I1KQ34r7hZhrwNwOZ97QxNx0drwn4QI0wQk1DcEsfKCWKdxVvxPSNUIp/knmAXT+nT+Ko3+0H96rcNb3m1fx7MBTJdeBJ7uFcWsc0wvgAsC4pROW0l2inbAmIBv/7GZmuhQH6API2rr8T0e6yuZJ+80A9LZeG62T3tik31XwxtwZcizKuTHkMjB1WdZde4Kmic/A5ZI3rr1ae21d08PlVHYfAaxw9G9CYRbJ+8ZdbTcMRV1XM3VdF0M32vtoTdZ0+u29s0OttJ5bz64UwinjaFMVY9vkqc3KKSxN21Xl+0L4Q3Vuv1tYl0pqnX6ms4XetFz7gdZVAgUEoJntfOUe4ZwsHd9FzqQ3Vv6xe41l0XJcqcKl6TZvlv7ClAW3BsqQW4X7ypApB8dmTgK4IX5wvqIVj33HtD2qSG4BqznxdIefL27Y4sahi0MdIdvUsDva8agGGbCtITmCY31MHD2O0uIdh/0rJDQ1VX5Zdxz3rR2QDbv6qXl9vudzqQtGm1Jv9LDXOsfvvB7VcZ8PDKD0mQ1VHPYQ9O+Yj4hR1IUD8rBnn3ho2m8oQMxbCFiKlL2ioSW5heeJqegED52CzxCtcGD3Kv8Wms9EYLyUhwaFIhSMBClevWEmiK/Iaogu4H7sg6ppQhQG8RUqivuTGOAJOg6FfgW0q0M0PQMRMEgXaeNf3SYDZ8PIMI0+wHgr/MgN7wYwpiLjCCqM6ydUDZLQiB6nDdNC8SDyig3jPPpFXGcC9O8BUBDVmgBY59E7Md/35Loe/UVEECEJwYggJjELZ4J71SaQSBeC02n4Da29CayJNA28SAhd2CQyC1Xw6pSmGSINQVuMhAZp4DClan9MgmkDDNmezqwS8sgtlXK/EPBhoaSmYVC/F7IO1jQEdHOlabpKh3+jzLQSTUiq4X2I+Ip/zU8rlaqAvkS21ElR+gqu3zbjjL+hIAiCIAiCIAiCIAiCsCf/AKrfVhSbvA+DAAAAAElFTkSuQmCC"> </a>
-                    </td>                 
                 </tr>
                 
 
