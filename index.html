@@ -1,16 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="icon" href="https://i.imgur.com/BAARnxG.png">
-    <title>Document</title>
-</head>
-<body>
+<DOCTYPE html>
+<html>
+    <head>
+    
+        <title> Pixel Piece </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="icon" href="https://i.imgur.com/BAARnxG.png">
+    
+    </head>
+    
+    <style>
+        
+    body{
+        background-image: -webkit-linear-gradient( rgb(32, 32, 32), #000043);
+        }
+    h1{
+        position: relative;
+        text-align: center;
+        color: #353535;
+        font-size: 50px;
+        font-family: "Cormorant Garamond", serif;
+        }
 
+    p{
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        font-size: 18px;
+        color: #676767;
+        }
+        
+    .frame{
+        width: 100%;
+        text-align: center;
+        }
+        
+    .custom-btn{
+        margin-right:5%;
+        width: 80%;
+        height: 50%;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 120%;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: inline-block;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        }
+
+    .btn-11{
+        border: none;
+        background: rgba(0,0,0,.5);
+        color: #fff;
+        overflow: hidden;
+        }
+        
+    .btn-11:hover{
+        color: #fff;
+        }
+        
+    .btn-11:before{
+        position: absolute;
+        display: inline-block;
+        background-color: #fff;
+        animation: shiny-btn1 4s ease-in-out infinite;
+        }
+        
+    .btn-11:hover{
+        opacity: .7;
+        }
+        
+    .btn-11:active{
+        transition: 3s;
+        box-shadow: 0 0 10px rgba(5, 0, 75, 0.3), 0 0 10px rgba(99, 255, 242, 0.993), 0 0 20px #fff, inset  0 0 15px rgb(208, 66, 255), inset  0 0 15px rgba(0, 0, 0, .2);
+        }
+        
+    .links td{
+        background-color: #676767;
+        border-radius: 10px;
+        }
+
+    @-webkit-keyframes shiny-btn1{
+        0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+        80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+        81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+        100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+        }
+
+    table{
+        text-align: center;
+        width: 95%;
+        height: 10%;
+        }
+        
+    td{
+        width: 25%; 
+        text-align: center;
+        }
+
+    .frame{
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+        
+    </style>
+
+    <body>
+
+            <div class="frame">
+                
+            <table>
+
+                <tr>
+                    
+                    <td><a target="tela" href="tutoriais.html"><button class="custom-btn btn-11">Tutoriais<div class="dot" ></div></button></a></td>
+
+                    <td><a target="tela" href="projetos_comunidade.html"> <button class="custom-btn btn-11">Comunidade<div class="dot" ></div></button> </a></td>
+
+                    <td><a target="tela" href="projetos_comunidade.html"> <button class="custom-btn btn-11">Galerias<div class="dot" ></div></button> </a></td>
+
+                    <td><a target="tela" href="project.html"> <button class="custom-btn btn-11">+ Novo Projeto<div class="dot" ></div></button> </a></td>
+                    
+                </tr>
+
+            </table>
+                
+                <div style="position:absolute; top:1.5%; right:2%;"><a style=""  target="tela" href="perfil.html"> <img style="border-radius: 100%; border: solid white 2px; width: 65px;" src="https://th.bing.com/th/id/OIP.lFBNfOPJdGk0M434ZVIwVQHaHZ?pid=ImgDet&rs=1"> </a></div>
+                
+            </div>
+
+            <iframe name="tela" src="inicio.html" width="100%" height="80%"></iframe>
+        
+            <br>
+    </body>
     
-    
-</body>
 </html>
